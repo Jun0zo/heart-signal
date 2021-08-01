@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="theme-color" content="#000000">
+	<title>React App</title>
+    <style>
+        #circle-implicit{
+            text-align: center;
+        }
+        #circle-implicit > svg{   
+            border: solid 0.5px;
+        }
+    </style>
+</head>
+<body>
+	<div id="root">
+        <div id="circle-implicit">
+            
+        </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="./function-plot.js"></script>
+	<script>
+        function sleep(ms) {
+            const wakeUpTime = Date.now() + ms
+            while (Date.now() < wakeUpTime) {}
+        }
+        function changeHeart(A, B, C){
+            functionPlot({
+                target: '#circle-implicit',
+                yAxis: {domain: [-1.897959183, 1.897959183]},
+                xAxis: {domain: [-3, 3]},
+                data: [{
+                    fn: `(${A} x^2 + ${B}y^2 - ${C})^3 - x^2*y^3`,
+                    fnType: 'implicit'
+                }]
+            })
+        }
+        let A=1;
+        let B=1;
+        let C=1;
+        $(document).on("ready", ()=>{
+            changeHeart(3,10,1);
+            //alert('done')
+            //sleep(5000);
+            /*for(var i=0; i<1000; i++){
+                changeHeart(i,10,1);
+                sleep(100);
+            }*/
+            //changeHeart(A_change,B,C);
+            $('#circle-implicit').on('before:draw', ()=>{
+                console.log('A : '+A);
+                A++;
+            })
+        });
+        
+
+        let contentsBounds = document.body.getBoundingClientRect();
+        
+        /*let width = 800;
+        let height = 500;
+        let ratio = contentsBounds.width / width;
+        width *= ratio;
+        height *= ratio;*/
+
+        /*setTimeout(() => {
+            for(let A_change=0; A_change<1000; A_change++){
+            changeHeart(A_change,B,C);
+                }
+            }, 1000)*/
+
+            /**/
+        /*console.log()
+        changeHeart(A,B,C);*/
+
+    </script>
+
+</body>
+
+</html>
+
+
+

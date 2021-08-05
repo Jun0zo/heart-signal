@@ -21,6 +21,6 @@ app.get('/', (req, res) => {
   res.render('main')
 })
 
-app.listen(8001, () => {
-  console.log(`Example app listening at http://localhost`)
+app.listen(3000, () => {
+  console.log('new good!')
 })

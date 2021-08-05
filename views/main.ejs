@@ -1,16 +1,17 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"/>
-        <link rel="stylesheet" href="/public/stylesheets/heartLogo.css">
-        <link rel="stylesheet" href="/public/stylesheets/main.css">
+        <link rel="stylesheet" href="/public/css/heartLogo.css">
+        <link rel="stylesheet" href="/public/css/main.css">
     </head>
     <body>
 		
 				<div class="ui inverted segment">
 					<div class="ui inverted secondary pointing menu">
 						<a class="title" href="">
-							<img src="/public/images/like.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+							<img src="/public/image/like.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
 							<span> </span>
 							<span>Heart Signal</span>
 						</a>
@@ -27,7 +28,7 @@
         </div>
 			
         <div id="capture-wrapper">
-            <img id="capture" src="/public/images/instagram-logo.svg" alt="공유하기" width=50 height=50>
+            <img id="capture" src="/public/image/instagram-logo.svg" alt="공유하기" width=50 height=50>
             
         </div>
 
@@ -88,11 +89,10 @@
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
         <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
-        <script src="/public/javascripts/heartDraw.js"></script>
-        <script src="/public/javascripts/latex.js"></script>
-        <script src="/public/javascripts/writeExp.js"></script>
-        <script src="/public/javascripts/kakaoShare.js"></script>
-        <script src="/public/javascripts/main.js"></script>
+        <script src="/public/js/heartDraw.js"></script>
+        <script src="/public/js/latex.js"></script>
+        <script src="/public/js/writeExp.js"></script>
+        <script src="/public/js/main.js"></script>
         <script>
             text2Latex('.x-exp');
             text2Latex('.y-exp-1');

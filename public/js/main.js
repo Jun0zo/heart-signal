@@ -4,4 +4,14 @@ document.querySelector('#capture').addEventListener("click", () => {
 	document.querySelector('.modal img')
 })
 
+console.log('start')
 
+document.querySelector('main').addEventListener('wheel', function(e) {
+	if (e.wheelDelta === 120) {
+		R += 10;
+	}
+	else {
+		if (R > 10)
+		R -= 10;
+	}
+});
